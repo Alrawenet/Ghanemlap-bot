@@ -7,11 +7,11 @@ API_SECRET = os.getenv("TWITTER_API_SECRET")
 ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
 ACCESS_SECRET = os.getenv("TWITTER_ACCESS_SECRET")
 
-# إعداد الاتصال
+# إعداد الاتصال باستخدام OAuth1
 auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-# تجربة التغريد
+# تجربة نشر تغريدة
 try:
     tweet = "✅ تم الاتصال بنجاح! تجربة تغريدة من GhanemLap-Bot 🌐"
     api.update_status(tweet)
